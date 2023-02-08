@@ -13,6 +13,10 @@ module.exports = {
         400: '400',
         500: '500',
         700: '700'
+      },
+      backgroundImage: {
+        bgAbout: "url(/src/assets/image/image-about.svg)",
+        bgPicnic: "url(/src/assets/image/image-pic.svg)"
       }
     },
   },

@@ -14,3 +14,9 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+.card-happy{
+  box-shadow: 0px 8px 24px rgba(37, 37, 37, 0.06);
+}
+.contact{
+  box-shadow: 0px 8px 24px rgba(37, 37, 37, 0.06);
+}
