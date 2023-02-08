@@ -20,3 +20,7 @@ code {
 .contact{
   box-shadow: 0px 8px 24px rgba(37, 37, 37, 0.06);
 }
+
+.imagePicnic{
+  filter: drop-shadow(0px 8px 24px rgba(37, 37, 37, 0.06));
+}
