@@ -8,5 +8,6 @@ import CardTeam from "./CardTeam";
 import Contact from "./Contact";
 import CardPicnic from "./CardPicnic";
 import Register from "./Register";
+import ArchiveImage from "./ArchiveImage";
 
-export {Navbar, Footer, UpPicnic, ImagePicnic, CardHappy, CardPartner, CardTeam, Contact, CardPicnic, Register}
+export {Navbar, Footer, UpPicnic, ImagePicnic, CardHappy, CardPartner, CardTeam, Contact, CardPicnic, Register, ArchiveImage}

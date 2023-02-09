@@ -6,17 +6,18 @@ const DetailPicnic = () => {
   return (
     <div>
         <Navbar/>
-        <div className='bg-[#FFA2A2] h-[249px] w-full flex items-center justify-center gap-[52px]'>
-            <img src={imagePicnic} alt={imagePicnic} className='relative -left-14 top-[105px] w-[388px] h-[389px] imagePicnic'/>
-            <div className='font-workSans text-white font-700'>
-                <p className='text-[61px] leading-[72px]'>Picnic at Museum</p>
-                <div className='text-[25px]'>
-                    <p className='my-2'>Sabtu, 16 Juli 2022 | 15.00 - Selesai</p>
+        <div className='bg-[#FFA2A2] flex-wrap p-3 lg:p-0 relative md:h-[249px] w-full flex items-center justify-center gap-[52px]'>
+            <img src={imagePicnic} alt={imagePicnic} className='hidden lg:block absolute left-16 top-[35px] imagePicnic w-[388px] h-[389px]'/>
+            <div className='font-workSans w-full text-white font-700 text-center mx-1 lg:text-start lg:w-[570px] lg:absolute lg:left-[510px]'>
+                <p className='text-[57px] md:text-[61px] leading-[72px]'>Picnic at Museum</p>
+                <div className='text-[20px] md:text-[25px]'>
+                    <p className='lg:my-2'>Sabtu, 16 Juli 2022 | 15.00 - Selesai</p>
                     <p>Taman Kota, Jakarta</p>
                 </div>
             </div>
+            <img src={imagePicnic} alt={imagePicnic} className='lg:hidden relative -top-5 mx-1 imagePicnic h-[389px]'/>
         </div>
-        <div className='w-[720px] ml-auto font-workSans font-500 text-[20px] text-[#262626] leading-[140%] mt-10'>
+        <div className='mx-2 md:w-[720px] md:mx-auto lg:top-10 lg:w-[500px] xl:w-[720px] lg:relative lg:mx-0 lg:left-[511px] lg:text-start md:mt-96 lg:mt-0 text-justify font-workSans font-500 text-[20px] text-[#262626] leading-[140%] mt-10'>
             <div className='mr-2'>
                 <p className='mb-7'>Halo semua!</p>
                 <p>Kami sangat senang untuk mengumumkan bahwa acara picnic tahunan kami akan segera diadakan! Ini adalah kesempatan bagus untuk berkumpul bersama teman-teman, keluarga, dan rekan kerja sambil menikmati suasana alam. Berikut adalah informasi penting tentang acara tersebut:</p>

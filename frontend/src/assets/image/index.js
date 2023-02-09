@@ -11,7 +11,11 @@ import profile from './profile.svg'
 import blank from './blank.svg'
 import profileTeam from './profile-team.svg'
 import picnic1 from './picnic1.svg'
+import article1 from './article1.svg'
+import article2 from './article2.svg'
+import article3 from './article3.svg'
 
 export {temanPiknik, logoSalt, image1, imagePicnic, 
         imagePicnic1, imagePicnic2, imagePicnic3, imagePicnic4, 
-        imagePicnic5, profile, blank, profileTeam, picnic1}
+        imagePicnic5, profile, blank, profileTeam, picnic1,
+        article1, article2, article3}
