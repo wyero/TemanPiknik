@@ -8,7 +8,7 @@ const ArchiveImage = () => {
         {img: article1},
         {img: article1},
         {img: article1},
-        {img: article1},
+        {img: article1}
     ]
   return (
     <div className='flex flex-wrap justify-center mx-2 gap-4'>

@@ -11,7 +11,7 @@ const UpPicnic = () => {
         <p className='text-[20px] my-2'>02 December 2022</p>
         <p className='line-clamp-3 font-400 leading-5 mb-6'>Lorem ipsum dolor sit amet consectetur. In augue arcu integer morbi in morbi. Dictumst faucibus amet nunc ultrices metus. Diam quis.</p>
         <Link to='/'>
-            <p className='text-[#FBFBFB] text-[31px] font-700 bg-[#EC5151] md:py-4 py-1 px-4 md:px-6 rounded-2xl w-[178px] md:w-[182px] mb-4 md:mb-0'>Let's Go!</p>
+            <p className='text-[#FBFBFB] text-[31px] font-700 bg-[#EC5151] py-4 px-6 rounded-2xl w-[190px] mb-4 md:mb-0 duration-200 hover:bg-white hover:text-[#EC5151] hover:border-2 hover:border-[#FFA2A2]'>Let's Go!</p>
         </Link>
        </div>
     </div>

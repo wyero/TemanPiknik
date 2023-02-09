@@ -12,9 +12,9 @@ const CardPartner = () => {
         {image: blank},
     ]
   return (
-    <div className='flex flex-wrap justify-center items-center gap-x-[140px] gap-y-[86px]'>
+    <div className='container md:w-[600px] flex flex-wrap justify-center items-center gap-x-[140px] gap-y-[86px]'>
         {itemsPartner.slice(0,6).map((itemsPartner, index) => (
-            <div key={index}>
+            <div key={index} className=''>
                 <img src={itemsPartner.image} alt={itemsPartner.image} className='w-[85px] h-[85px] rounded-full'/>
             </div>
         ))}

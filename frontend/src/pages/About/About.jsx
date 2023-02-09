@@ -15,16 +15,16 @@ const About = () => {
         </div>
         <p className='font-workSans sm:w-[492px] font-500 text-[20px] px-1 lg:px-0 ml-auto mt-[80px] sm:mt-[84px] lg:mt-[160px] xl:mt-[84px] xl:mr-1 2xl:mr-[100px]'>Berharganya makna sebuah perkenalan demi hubungan pertemanan. Mari kenalan dengan teman-teman dari Teman Piknikmu yang akan menemani piknik kalian di hari libur yang cerah dan menghilangkan suntuknya beban pekerjaan.</p>
         <div className='mt-[66px]'>
-            <hr className='bg=[#BFBFBF] mb-20 mx-70'/>
+            <hr className='bg-[#BFBFBF] mb-20 container '/>
             {content.map((content, index)=>(
-                <div key={index} className='flex flex-col items-center justify-between xl:flex-row xl:items-start text-[#595959] gap-7 xl:mx-70'>
-                    <div className='hidden xl:block w-[310px] h-[281px] bg-[#FFE0E0] rounded-2xl'></div>
-                    <div className='md:w-[248px] text-center flex flex-col items-center mx-1 xl:text-start'>
+                <div key={index} className='flex flex-col items-center justify-between xl:flex-row xl:items-start text-[#595959] gap-7 container'>
+                    <div className='hidden xl:block w-[310px] mx-2 h-[281px] bg-[#FFE0E0] rounded-2xl'></div>
+                    <div className='md:w-[248px] text-center flex flex-col items-center xl:text-start'>
                         <p className='text-[49px] font-700 mb-1 xl:mb-5 text-[#262626]'>{content.title}</p>
-                        <div className='xl:hidden w-[310px] h-[281px] bg-[#FFE0E0] rounded-2xl'></div>\
+                        <div className='xl:hidden w-[310px] h-[281px] mx-2 bg-[#FFE0E0] rounded-2xl'></div>\
                         <p className='text-xl font-500 leading-7'>{content.desc1}</p>
                     </div>
-                    <div className='flex  flex-wrap gap-7 mx-2 text-justify lg:text-start justify-between xl:w-[276px] 2xl:w-[614px]'> 
+                    <div className='flex  flex-wrap gap-7 mx-2 text-justify lg:text-start justify-between xl:w-[276px]'> 
                         <div className='font-400 leading-5 sm:w-[276px] mr-[30px]'>
                             <p>{content.desc2}</p>
                             <p className='mt-6'>{content.desc3}</p>
@@ -36,7 +36,7 @@ const About = () => {
                     </div>
                 </div>
             ))}
-            <div className='mt-[127px] mb-[114px] xl:mx-70 bg-white z-50'>
+            <div className='mt-16 md:mt-[127px] mb-[114px] container'>
                 <p className='font-workSans font-700 text-[49px] text-center text-[#262626] mb-10'>Our <span className='text-[#EC5151]'>Team</span></p>
                 <CardTeam/>
             </div>

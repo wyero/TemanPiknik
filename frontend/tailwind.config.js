@@ -17,6 +17,15 @@ module.exports = {
       backgroundImage: {
         bgAbout: "url(/src/assets/image/image-about.svg)",
         bgPicnic: "url(/src/assets/image/image-pic.svg)"
+      },
+      container: {
+        center: true,
+        screens: {
+          sm: "500px",
+          md: "628px",
+          lg: "884px",
+          xl: "1140px",
+        }
       }
     },
   },

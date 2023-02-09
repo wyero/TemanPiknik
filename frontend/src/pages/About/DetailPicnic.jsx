@@ -6,18 +6,21 @@ const DetailPicnic = () => {
   return (
     <div>
         <Navbar/>
-        <div className='bg-[#FFA2A2] flex-wrap p-3 lg:p-0 relative md:h-[249px] w-full flex items-center justify-center gap-[52px]'>
-            <img src={imagePicnic} alt={imagePicnic} className='hidden lg:block absolute left-16 top-[35px] imagePicnic w-[388px] h-[389px]'/>
-            <div className='font-workSans w-full text-white font-700 text-center mx-1 lg:text-start lg:w-[570px] lg:absolute lg:left-[510px]'>
-                <p className='text-[57px] md:text-[61px] leading-[72px]'>Picnic at Museum</p>
-                <div className='text-[20px] md:text-[25px]'>
-                    <p className='lg:my-2'>Sabtu, 16 Juli 2022 | 15.00 - Selesai</p>
-                    <p>Taman Kota, Jakarta</p>
+        <div className='bg-[#FFA2A2]'>
+            <div className='container flex-wrap p-3 lg:p-0 relative w-full flex items-center justify-center xl:justify-start gap-[52px]'>
+                <img src={imagePicnic} alt={imagePicnic} className='hidden xl:block relative top-24 imagePicnic w-[388px] h-[389px]'/>
+                <div className='font-workSans w-full text-white font-700 text-center mx-2 xl:text-start xl:w-[570px]'>
+                    <p className='text-[57px] md:text-[61px] leading-[72px]'>Picnic at Museum</p>
+                    <div className='text-[20px] md:text-[25px]'>
+                        <p className='lg:my-2'>Sabtu, 16 Juli 2022 | 15.00 - Selesai</p>
+                        <p>Taman Kota, Jakarta</p>
+                    </div>
                 </div>
+                <img src={imagePicnic} alt={imagePicnic} className='xl:hidden relative mx-2 -top-5 imagePicnic sm:w-[388px] h-[389px]'/>
             </div>
-            <img src={imagePicnic} alt={imagePicnic} className='lg:hidden relative -top-5 mx-1 imagePicnic h-[389px]'/>
         </div>
-        <div className='mx-2 md:w-[720px] md:mx-auto lg:top-10 lg:w-[500px] xl:w-[720px] lg:relative lg:mx-0 lg:left-[511px] lg:text-start md:mt-96 lg:mt-0 text-justify font-workSans font-500 text-[20px] text-[#262626] leading-[140%] mt-10'>
+        <div className='container mx-auto xl:text-start text-justify font-workSans font-500 text-[20px] text-[#262626] leading-[140%]'>
+            <div className='xl:w-[680px] mx-2 xl:ml-auto mt-10'>
             <div className='mr-2'>
                 <p className='mb-7'>Halo semua!</p>
                 <p>Kami sangat senang untuk mengumumkan bahwa acara picnic tahunan kami akan segera diadakan! Ini adalah kesempatan bagus untuk berkumpul bersama teman-teman, keluarga, dan rekan kerja sambil menikmati suasana alam. Berikut adalah informasi penting tentang acara tersebut:</p>
@@ -50,7 +53,8 @@ const DetailPicnic = () => {
                 <p>Salam,</p>
                 <p>Panitia Acara</p>
             </div>
-            <div className='mt-[60px] mb-48'>
+            </div>
+            <div className='mt-[60px] mb-48 mx-2'>
                 <Register/>
             </div>
         </div>

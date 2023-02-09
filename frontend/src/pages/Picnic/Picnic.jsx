@@ -10,7 +10,7 @@ const Picnic = () => {
                 <p className='sm:p-2 md:w-[522px] lg:w-[700px] p-1 lg:py-[88px] lg:pl-[70px] lg:pr-[90px] text-white font-workSans text-[50px] sm:text-[61px] leading-[72px] font-700'>Piknik Seru Kemarin</p>
             </div>
         </div>
-        <div className='mt-16 md:mt-[130px] lg:mt-[210px] lg:ml-70 mb-[128px]'>
+        <div className='container mt-16 md:mt-[130px] lg:mt-[210px] mb-[128px]'>
             <CardPicnic/>
         </div>
         <Footer/>

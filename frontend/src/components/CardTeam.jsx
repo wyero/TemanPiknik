@@ -12,7 +12,7 @@ const CardTeam = () => {
         {img: profileTeam, name: 'Angela Pehulisa', role: 'Head of Partnership & Community Relation', link: 'https://instagram.com'},
     ]
   return (
-    <div className='flex flex-wrap justify-evenly gap-y-[88px]'>
+    <div className='flex flex-wrap justify-evenly gap-y-[88px] mx-2'>
         {itemsTeam.slice(0,6).map((itemsTeam, index)=>(
             <div key={index} className='card-happy w-[358px] rounded-[10px] flex flex-col items-center font-workSans text-[#262626]'>
                 <img src={itemsTeam.img} alt={itemsTeam.image} className='w-[102px] h-[102px] mt-6'/>
