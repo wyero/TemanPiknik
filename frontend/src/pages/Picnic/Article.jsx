@@ -25,9 +25,9 @@ const Article = () => {
             <div className='mt-[54px]'>
                 <p className='font-500 text-[25px] text-[#262626] mb-5'>Share to :</p>
                 <div className='flex items-center gap-[29.9px]'>
-                    <a href="http://" target="_blank" rel="noopener noreferrer"><BsFacebook className='text-[33.33px] text-[#FFA2A2]'/></a>
-                    <a href="http://" target="_blank" rel="noopener noreferrer"><BsTwitter className='text-[33.33px] text-[#FFA2A2]'/></a>
-                    <a href="http://" target="_blank" rel="noopener noreferrer"><BsInstagram className='text-[33.33px] text-[#FFA2A2]'/></a>
+                    <a href="http://" target="_blank" rel="noopener noreferrer"><BsFacebook className='text-[33.33px] text-[#FFA2A2] duration-200 hover:text-[#EC5151]'/></a>
+                    <a href="http://" target="_blank" rel="noopener noreferrer"><BsTwitter className='text-[33.33px] text-[#FFA2A2] duration-200 hover:text-[#EC5151]'/></a>
+                    <a href="http://" target="_blank" rel="noopener noreferrer"><BsInstagram className='text-[33.33px] text-[#FFA2A2] duration-200 hover:text-[#EC5151]'/></a>
                 </div>
             </div>
         </div>

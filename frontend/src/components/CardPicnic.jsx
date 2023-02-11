@@ -5,11 +5,11 @@ import {FiChevronLeft} from 'react-icons/fi'
 
 const CardPicnic = () => {
     const itemsPicnic = [
-        {image: picnic1, title: "Keseruan Piknik di Taman Kota, Jakarta", desc: "Ini adalah deskripsi untuk artikel dari post. maksimal 100 characters", link: "https://google.com"},
-        {image: picnic1, title: "Keseruan Piknik di Taman Kota, Jakarta", desc: "Ini adalah deskripsi untuk artikel dari post. maksimal 100 characters", link: "https://google.com"},
-        {image: picnic1, title: "Keseruan Piknik di Taman Kota, Jakarta", desc: "Ini adalah deskripsi untuk artikel dari post. maksimal 100 characters", link: "https://google.com"},
-        {image: picnic1, title: "Keseruan Piknik di Taman Kota, Jakarta", desc: "Ini adalah deskripsi untuk artikel dari post. maksimal 100 characters", link: "https://google.com"},
-        {image: picnic1, title: "Keseruan Piknik di Taman Kota, Jakarta", desc: "Ini adalah deskripsi untuk artikel dari post. maksimal 100 characters", link: "https://google.com"},
+        {image: picnic1, title: "Keseruan Piknik di Taman Kota, Jakarta", desc: "Ini adalah deskripsi untuk artikel dari post. maksimal 100 characters", link: "/picnic-article"},
+        {image: picnic1, title: "Keseruan Piknik di Taman Kota, Jakarta", desc: "Ini adalah deskripsi untuk artikel dari post. maksimal 100 characters", link: "/picnic-article"},
+        {image: picnic1, title: "Keseruan Piknik di Taman Kota, Jakarta", desc: "Ini adalah deskripsi untuk artikel dari post. maksimal 100 characters", link: "/picnic-article"},
+        {image: picnic1, title: "Keseruan Piknik di Taman Kota, Jakarta", desc: "Ini adalah deskripsi untuk artikel dari post. maksimal 100 characters", link: "/picnic-article"},
+        {image: picnic1, title: "Keseruan Piknik di Taman Kota, Jakarta", desc: "Ini adalah deskripsi untuk artikel dari post. maksimal 100 characters", link: "/picnic-article"},
     ]
   return (
     <div>
@@ -19,7 +19,7 @@ const CardPicnic = () => {
                 <div className='font-workSans sm:w-[600px] sm:text-center lg:text-start lg:w-[749px] lg:mr-5'>
                     <p className='text-[49px] font-700 leading-[56px]'>{itemsPicnic.title}</p>
                     <p className='line-clamp-1 my-5 text-[20px] text-[#595959] font-500'>{itemsPicnic.desc}</p>
-                    <Link to={itemsPicnic.link} className='text-[#EC5151] font-500 text-[20px]'>Read More</Link>
+                    <Link to={itemsPicnic.link} className='text-[#EC5151] font-500 text-[20px] duration-100 hover:opacity-75'>Read More</Link>
                 </div>
             </div>
         ))}

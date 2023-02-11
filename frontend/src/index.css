@@ -24,3 +24,43 @@ code {
 .imagePicnic{
   filter: drop-shadow(0px 8px 24px rgba(37, 37, 37, 0.06));
 }
+.swiper-slide{
+  width: 100%!important;
+}
+.swiper,
+swiper-container {
+  margin-left: auto;
+  margin-right: auto;
+  position: relative;
+  overflow: inherit!important;
+  list-style: none;
+  padding: 0;
+  z-index: 1;
+  display: block;
+}
+.swiper-pagination{
+  position: relative!important;
+  top: 90px!important;
+}
+.swiper-pagination-bullet{
+  margin-right: 12px!important;
+  margin-left: 0!important;
+  width: 16px!important;
+  height: 16px!important;
+  border-radius: 50px;
+  background: #BFBFBF!important;
+}
+.swiper-pagination-bullet-active{
+  background: #EC5151!important;
+  width: 44px!important;
+  border-radius: 8px!important;
+}
+@media screen and (min-width: 768px){
+  .swiper-slide{
+    width: 794px!important;
+  }
+  .swiper-pagination{
+    position: relative!important;
+    top: 110px!important;
+  }
+}
