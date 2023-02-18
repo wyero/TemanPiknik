@@ -1,6 +1,6 @@
 import React from 'react'
 import {BrowserRouter as Router, Routes, Route} from 'react-router-dom'
-import { Home, About, Picnic, DetailPicnic, Article, Archive } from '../pages'
+import { Home, About, Picnic, DetailPicnic, Article, Archive, Team } from '../pages'
 
 const Routing = () => {
   return (
@@ -8,10 +8,11 @@ const Routing = () => {
         <Routes>
             <Route path='/' element={<Home/>}/>
             <Route path='/about' element={<About/>}/>
-            <Route path='/picnic' element={<Picnic/>}/>
-            <Route path='/detail-picnic' element={<DetailPicnic/>}/>
-            <Route path='/picnic-article' element={<Article/>}/>
+            <Route path='/yesterday-picnic' element={<Picnic/>}/>
+            <Route path='/event/:id' element={<DetailPicnic/>}/>
+            <Route path='/yesterday-picnic/:id' element={<Article/>}/>
             <Route path='/picnic-archive' element={<Archive/>}/>
+            <Route path='/teams' element={<Team/>}/>
         </Routes>
     </Router>
   )

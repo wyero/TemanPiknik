@@ -9,5 +9,6 @@ import Contact from "./Contact";
 import CardPicnic from "./CardPicnic";
 import Register from "./Register";
 import ArchiveImage from "./ArchiveImage";
+import HappyList from "./HappyList";
 
-export {Navbar, Footer, UpPicnic, ImagePicnic, CardHappy, CardPartner, CardTeam, Contact, CardPicnic, Register, ArchiveImage}
+export {Navbar, Footer, UpPicnic, ImagePicnic, CardHappy, CardPartner, CardTeam, Contact, CardPicnic, Register, ArchiveImage, HappyList}

@@ -1,10 +1,20 @@
-import React from 'react'
+import React, {useState, useEffect} from 'react'
+import axios from 'axios'
+import { Link } from 'react-router-dom'
 import { CardTeam, Contact, Footer, Navbar } from '../../components'
 import { content } from '../../data'
 import {BsWhatsapp, BsInstagram} from 'react-icons/bs'
-import {CiFacebook} from 'react-icons/ci'
+import {RiFacebookCircleLine} from 'react-icons/ri'
 
 const About = () => {
+    const [teams, setTeams] = useState([])
+    useEffect(()=>{
+        const getTeam = async() => {
+            const response = await axios.get('http://localhost:1337/api/teams?populate=*')
+            setTeams(response.data.data)
+        }
+        getTeam()
+    }, [])
   return (
     <div className='overflow-hidden'>
         <Navbar/>
@@ -21,7 +31,7 @@ const About = () => {
                     <div className='hidden xl:block w-[310px] mx-2 h-[281px] bg-[#FFE0E0] rounded-2xl'></div>
                     <div className='md:w-[248px] text-center flex flex-col items-center xl:text-start'>
                         <p className='text-[49px] font-700 mb-1 xl:mb-5 text-[#262626]'>{content.title}</p>
-                        <div className='xl:hidden w-[310px] h-[281px] mx-2 bg-[#FFE0E0] rounded-2xl'></div>\
+                        <div className='xl:hidden w-[310px] h-[281px] mx-2 bg-[#FFE0E0] rounded-2xl'></div>
                         <p className='text-xl font-500 leading-7'>{content.desc1}</p>
                     </div>
                     <div className='flex  flex-wrap gap-7 mx-2 text-justify lg:text-start justify-between xl:w-[276px]'> 
@@ -38,7 +48,16 @@ const About = () => {
             ))}
             <div className='mt-16 md:mt-[127px] mb-[114px] container'>
                 <p className='font-workSans font-700 text-[49px] text-center text-[#262626] mb-10'>Our <span className='text-[#EC5151]'>Team</span></p>
-                <CardTeam/>
+                <div className='flex flex-wrap justify-evenly gap-y-[88px] mx-2'>
+                    {teams.slice(0,6).map((team)=>{
+                        return(
+                            <CardTeam key={team.id} team={team}/>
+                        )
+                    })}
+                </div> 
+                <div className='text-center capitalize relative top-10 text-[#EC5151] font-500 font-workSans'>
+                    <Link to='/teams' className='duration-150 hover:opacity-50 '>view all</Link>
+                </div>
             </div>
             <div className='relative mb-10 md:mb-[550px] lg:mb-[400px]'>
                 <div className='bg-[#FFA2A2]'>
@@ -49,7 +68,7 @@ const About = () => {
                             <div className='flex items-center justify-center md:justify-start gap-[27.76px] mt-[30px]'>
                                 <a href="http://" target="_blank" rel="noopener noreferrer"><BsInstagram className='text-[36.67px]'/></a>
                                 <a href="http://" target="_blank" rel="noopener noreferrer"><BsWhatsapp className='text-[36.67px]'/></a>
-                                <a href="http://" target="_blank" rel="noopener noreferrer"><CiFacebook className='text-[36.67px]'/></a>
+                                <a href="http://" target="_blank" rel="noopener noreferrer"><RiFacebookCircleLine className='text-[42px]'/></a>
                             </div>
                         </div>
                         <div className='md:absolute md:left-[290px] md:top-56 lg:left-[550px] lg:top-10 2xl:left-[700px]'>
