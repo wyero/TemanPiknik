@@ -6,16 +6,18 @@ import axios from 'axios'
 const DetailPicnic = () => {
     const [detailPicnic, setDetailPicnic] = useState({})
     const [loading, setLoading] = useState(true)
-    const {id} = useParams()
+    const {slug} = useParams()
 
     useEffect(()=>{
         const getPicnicByTitle = async()=>{
-            const response = await axios.get(`http://localhost:1337/api/picnics/${id}?populate=*`)
+            const response = await axios.get(`http://localhost:1337/api/picnics?filters[slug][$eq]=${slug}&populate=*`)
             setDetailPicnic(response.data.data)
+            console.log(detailPicnic)
             setLoading(false)
         }
         getPicnicByTitle()
-    }, [id])
+         // eslint-disable-next-line react-hooks/exhaustive-deps
+    }, [])
 
     if(loading){
         return <h2 className='text-[22px] mt-10 text-center   font-workSans font-600'>Loading...</h2>

@@ -12,9 +12,7 @@ const Home = () => {
                 <div className='flex container mx-auto'>
                     <div className='font-workSans mx-2 font-700 w-full md:mt-[108px] lg:mt-0 xl:mt-[108px] xl:w-[665px] container'>
                         <p className='text-[55px] sm:text-[61px] text-[#262626] mb-5'>We're going to have a picnic, weather permitting. <span className='text-[#EC5151]'>Shall we?</span></p>
-                        <Link to='/yesterday-picnic' className=''>
-                            <p className='bg-[#EC5151] text-[31px] text-[#FBFBFB] py-4 px-8 rounded-2xl w-[205px] duration-200 hover:bg-white hover:text-[#EC5151] hover:border-2 hover:border-[#EC5151]'>Let's Go!</p>
-                        </Link>
+                        <Link to='/yesterday-picnic' className='bg-[#EC5151] text-[31px] text-[#FBFBFB] py-4 px-8 rounded-2xl w-[205px] duration-200 hover:bg-white hover:text-[#EC5151] hover:border-2 hover:border-[#EC5151]'>Let's Go!</Link>
                     </div>
                     <div className='hidden lg:block absolute bg-[#FFA2A2] w-[400px] -z-50 h-[350px] 2xl:w-[490px] 2xl:h-[465px] right-0 top-0'></div>
                     <img src={image1} alt={image1} className='hidden lg:block -z-50  w-[500px] h-[430px] 2xl:w-[552px] 2xl:h-[497px] rounded-2xl' />
