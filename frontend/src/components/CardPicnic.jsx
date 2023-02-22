@@ -20,7 +20,7 @@ const CardPicnic = () => {
                 <div className='font-workSans sm:w-[600px] sm:text-center lg:text-start lg:w-[749px] lg:mr-5'>
                     <p className='text-[49px] font-700 leading-[56px]'>{picnic.attributes.title}</p>
                     <p className='line-clamp-1 my-5 text-[20px] text-[#595959] font-500'>{picnic.attributes.content}</p>
-                    <Link to={`/yesterday-picnic/${picnic.id}`} className='text-[#EC5151] font-500 text-[20px] duration-100 hover:opacity-75'>Read More</Link>
+                    <Link to={`/yesterday-picnic/${picnic.attributes.slug}`} className='text-[#EC5151] font-500 text-[20px] duration-100 hover:opacity-75'>Read More</Link>
                 </div>
             </div>
         ))}

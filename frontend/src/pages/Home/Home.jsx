@@ -1,10 +1,19 @@
-import React from 'react'
+import React, {useState, useEffect} from 'react'
+import axios from 'axios'
 import { Navbar, Footer, UpPicnic, ImagePicnic, CardPartner, HappyList } from '../../components'
 import { Link } from 'react-router-dom'
 import { image1 } from '../../assets/image'
 import { content } from '../../data'
 
 const Home = () => {
+    const [picnics, setPicnics] = useState([])
+    useEffect(()=>{
+        const getPicnic = async() => {
+        const response = await axios.get('http://localhost:1337/api/picnics?populate=*')
+        setPicnics(response.data.data)
+        }
+        getPicnic()
+    }, [])
     return (
         <div className='overflow-hidden'>
             <Navbar />
@@ -37,6 +46,7 @@ const Home = () => {
                         </div>
                     ))}
                 </div>
+               {picnics.length>0 && (
                 <div className='mt-16 md:mt-20'>
                     <p className='text-center text-[#EC5151] font-workSans font-700 text-[49px] mb-6'>Upcoming <span className='text-[#262626]'>Picnic</span></p>
                     <div className='bg-[#FFE0E0]'>
@@ -45,6 +55,7 @@ const Home = () => {
                         </div>
                     </div>
                 </div>
+               )}
                 <div className='relative mb-[121px] mx-2'>
                     <div className='mt-16 md:mt-[120px] font-workSans sm:w-[373px] mx-auto mb-[60px]'>
                         <p className='text-center font-700 text-[49px] leading-[56px]'>Our <span className='text-[#EC5151]'>Picnic</span> from Yesterday</p>
