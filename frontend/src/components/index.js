@@ -8,7 +8,10 @@ import CardTeam from "./CardTeam";
 import Contact from "./Contact";
 import CardPicnic from "./CardPicnic";
 import Register from "./Register";
-import ArchiveImage from "./ArchiveImage";
 import HappyList from "./HappyList";
+import BannerHome from "./BannerHome";
+import BannerAbout from "./BannerAbout";
+import AboutContent from "./AboutContent";
+import BannerPicnic from "./BannerPicnic";
 
-export {Navbar, Footer, UpPicnic, ImagePicnic, CardHappy, CardPartner, CardTeam, Contact, CardPicnic, Register, ArchiveImage, HappyList}
+export {Navbar, Footer, UpPicnic, ImagePicnic, CardHappy, CardPartner, CardTeam, Contact, CardPicnic, Register, HappyList, BannerHome, BannerAbout, AboutContent, BannerPicnic}

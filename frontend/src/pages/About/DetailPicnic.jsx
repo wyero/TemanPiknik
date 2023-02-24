@@ -59,7 +59,7 @@ const DetailPicnic = () => {
                     <div className='container mx-auto xl:text-start text-justify font-workSans font-500 text-[20px] text-[#262626] leading-[140%]'>
                         <div className='xl:w-[680px] mx-2 xl:ml-auto mt-10'>
                             <div className='mr-2'>
-                                <ReactMarkdown>{detailPicnic.attributes.content}</ReactMarkdown>
+                                <ReactMarkdown className='content'>{detailPicnic.attributes.content}</ReactMarkdown>
                             </div>
                         </div>
                         <div className='mt-[60px] mb-48 mx-2'>
