@@ -7,11 +7,13 @@ import ReactPaginate from 'react-paginate'
 
 const CardPicnic = () => {
     const [picnics, setPicnics] = useState([])
+    const [pageCount, setPageCount] = useState(0)
 
     useEffect(()=>{
         const getPicnic = async() => {
             const response = await axios.get(`http://localhost:1337/api/picnic-collections?pagination[page]=1&pagination[pageSize]=4&populate=*`)
             setPicnics(response.data.data)
+            setPageCount(response.data.meta.pagination.pageCount)
         }
         getPicnic()
     }, [])
@@ -28,6 +30,7 @@ const CardPicnic = () => {
         const click = await getPicnics(currentPage)
         setPicnics(click)
     }
+
   return (
     <div>
         {picnics.map((picnic)=>(
@@ -41,17 +44,16 @@ const CardPicnic = () => {
             </div>
         ))}
         <ReactPaginate
-            className='mt-12 flex items-center justify-center font-workSans text-[20px] font-500 gap-7 cursor-pointer'
+            className='mt-12 flex items-center justify-center font-workSans text-[20px] font-500 gap-7 cursor-pointer text-[#595959]'
             previousLabel={<FiChevronLeft/>}
             nextLabel={<FiChevronLeft className='rotate-180'/>}
             breakLabel={'...'}
             onPageChange={handleClick}
-            pageCount={2}
-            marginPagesDisplayed={3}
+            pageCount={pageCount}
             pageRangeDisplayed={3}
-        >
-
-        </ReactPaginate>
+            marginPagesDisplayed={3}
+            renderOnZeroPageCount={null}
+        ></ReactPaginate>
     </div>
   )
 }

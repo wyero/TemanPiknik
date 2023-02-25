@@ -31,7 +31,7 @@ const Article = () => {
             <div>
                 <img src={process.env.REACT_APP_BASE_URL + article.attributes.image.data.attributes.url} alt={article.attributes.title} className='sm:w-[859px] mx-auto h-[312px] rounded-2xl'/>
                 <p className='text-[49px] font-700 leading-[56px] mt-10 mb-5 text-[#262626]'>{article.attributes.title}</p>
-                <ReactMarkDown className='content'>{article.attributes.description}</ReactMarkDown>
+                <ReactMarkDown className='content contentPicnic'>{article.attributes.description}</ReactMarkDown>
             </div>
             <div className='mt-[54px]'>
                 <p className='font-500 text-[25px] text-[#262626] mb-5'>Share to :</p>
