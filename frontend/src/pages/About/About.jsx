@@ -30,9 +30,9 @@ const About = () => {
                         )
                     })}
                 </div> 
-                <div className='text-center capitalize relative top-10 text-[#EC5151] font-500 font-workSans'>
+                {teams.length>6 && (<div className='text-center capitalize relative top-10 text-[#EC5151] font-500 font-workSans'>
                     <Link to='/teams' className='duration-150 hover:opacity-50 '>view all</Link>
-                </div>
+                </div>)}
             </div>
             <div className='relative mb-10 md:mb-[550px] lg:mb-[400px]'>
                 <div className='bg-[#FFA2A2]'>

@@ -6,7 +6,7 @@ import {BsFacebook, BsTwitter, BsInstagram} from 'react-icons/bs'
 
 const Footer = () => {
   return (
-    <footer className='bg-[#F7F7F7] py-[70px] relative'>
+    <footer className='bg-[#F7F7F7] py-[70px]'>
         <div className='container flex justify-between gap-7 flex-wrap font-workSans font-400 text-[#595959]'>
             <div className=''>
                 <img src={temanPiknik} alt={temanPiknik} className='w-[305px] h-[84px] mb-[17px]'/>

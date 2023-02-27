@@ -14,7 +14,7 @@ const BannerAbout = () => {
         getBanner()
     }, [])
     if(loading) return ""
-  return (
+  if(banner !== 0) return (
     <div>
         <div style={{backgroundImage: `url(${process.env.REACT_APP_BASE_URL + banner.attributes.banner.data.attributes.url})`}} className='w-full h-[497px] bg-no-repeat bg-cover'>
             <div className='bg-[#FFA2A2] rounded-r-2xl md:w-[710px] relative top-[330px] sm:top-[380px] lg:top-80'>

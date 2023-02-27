@@ -13,5 +13,6 @@ import BannerHome from "./BannerHome";
 import BannerAbout from "./BannerAbout";
 import AboutContent from "./AboutContent";
 import BannerPicnic from "./BannerPicnic";
+import HomeAbout from "./HomeAbout";
 
-export {Navbar, Footer, UpPicnic, ImagePicnic, CardHappy, CardPartner, CardTeam, Contact, CardPicnic, Register, HappyList, BannerHome, BannerAbout, AboutContent, BannerPicnic}
+export {Navbar, Footer, UpPicnic, ImagePicnic, CardHappy, CardPartner, CardTeam, Contact, CardPicnic, Register, HappyList, BannerHome, BannerAbout, AboutContent, BannerPicnic, HomeAbout}

@@ -67,14 +67,12 @@ swiper-container {
     top: 110px!important;
   }
 }
-
 .content img{
   width: 100%;
   height: 420px;
   border-radius: 16px;
   margin: 5px 0;
 }
-
 .content p{
   font-size: 20px;
   line-height: 140%;
@@ -83,21 +81,21 @@ swiper-container {
   gap: 10px;
   margin-bottom: 20px;
 }
-
-.content li{
+.content ul{
   list-style: disc;
   margin-left: 25px;
-  color:  #262626;
-}
-.content ul{
   margin-top: -20px;
   margin-bottom: 20px;
 }
-
+.content ol{
+  list-style: decimal;
+  margin-left: 25px;
+  margin-top: -20px;
+  margin-bottom: 20px;
+}
 .content h1,h2,h3,h4,h5,h6{
   font-weight: bold;
 }
-
 .content h1{
   font-size: 2em;
 }
@@ -116,7 +114,6 @@ swiper-container {
 .content h6{
   font-size: .67em;
 }
-
 .about p{
   font-weight: 400;
   font-family: 'Work Sans', sans-serif;
@@ -124,15 +121,25 @@ swiper-container {
   color: #595959;
   text-align: justify;
 }
-
 .contentPicnic p{
   color: #595959;
 }
 
+.contentPicnic ul{
+  list-style: disc;
+  font-size: 20px;
+  color: #595959;
+  font-weight: 500;
+}
+.contentPicnic ol{
+  list-style: decimal;
+  font-size: 20px;
+  color: #595959;
+  font-weight: 500;
+}
 .about p:first-of-type{
   margin-bottom: 20px;
 }
-
 .home p{
   color: white;
 }
@@ -140,7 +147,6 @@ swiper-container {
 .selected{
   color: #EC5151;
 }
-
 @media screen and (min-width:884px){
   .content img{
       width: 420px;
@@ -151,7 +157,6 @@ swiper-container {
     margin-left: -30px;
   }
 }
-
 @media screen and (min-width:628px){
   .about{
     display: flex;

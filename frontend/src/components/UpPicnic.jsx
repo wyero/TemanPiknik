@@ -40,7 +40,7 @@ const UpPicnic = () => {
                 <div className='font-workSans text-[#595959] font-500 md:w-[420px] mr-4 pb-5 md:pb-0'>
                   <p className='text-[#262626] text-[25px]'>{picnic.attributes.title}</p>
                   <p className='text-[20px] my-2'>{myDate(picnic.attributes.start_date_time)}</p>
-                  <p className='line-clamp-3 font-400 leading-5 mb-6'>{picnic.attributes.content}</p>
+                  <p className='line-clamp-3 font-400 leading-5 mb-6'>{picnic.attributes.excerpt}</p>
                     <Link to={`/event/${picnic.attributes.slug}`}>
                       <div className='text-[#FBFBFB] text-[31px] text-center font-700 bg-[#EC5151] py-4 px-6 rounded-2xl duration-200 hover:bg-white hover:text-[#EC5151] hover:border-2 hover:border-[#FFA2A2] w-[190px]'>Let's Go!</div>
                     </Link>

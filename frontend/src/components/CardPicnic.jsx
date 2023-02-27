@@ -25,8 +25,7 @@ const CardPicnic = () => {
     }
 
     const handleClick = async(data) =>{
-        let currentPage = data.selected + 1
-        
+        let currentPage = data.selected + 1 
         const click = await getPicnics(currentPage)
         setPicnics(click)
     }
