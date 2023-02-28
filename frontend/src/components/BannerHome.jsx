@@ -1,14 +1,14 @@
-import axios from 'axios'
 import React, {useState, useEffect} from 'react'
 import { Link } from 'react-router-dom'
+import { getApi } from '../config/HTTPHandler'
 
 const BannerHome = () => {
     const [banner, setBanner] = useState({})
     const [loading, setLoading] = useState(true)
     useEffect(()=>{
         const getBanner = async() => {
-            const response = await axios.get('http://localhost:1337/api/home-page?populate=*')
-            setBanner(response.data.data)
+            const response = await getApi('/home-page?populate=*', true)
+            setBanner(response.data)
             setLoading(false)
         }
         getBanner()

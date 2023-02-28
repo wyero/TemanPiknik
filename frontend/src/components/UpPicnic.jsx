@@ -1,19 +1,9 @@
-import React, { useEffect, useState } from 'react'
+import React from 'react'
 import { Link } from 'react-router-dom'
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Pagination } from "swiper";
-import axios from 'axios';
 
-const UpPicnic = () => {
-  const [picnics, setPicnics] = useState([])
-  useEffect(()=>{
-    const getPicnic = async() => {
-      const response = await axios.get('http://localhost:1337/api/picnics?populate=*')
-      setPicnics(response.data.data)
-    }
-    getPicnic()
-  }, [])
-
+const UpPicnic = ({ picnicData }) => {
   const myDate = (value) => {
     var options = {
       year: "numeric",
@@ -32,7 +22,7 @@ const UpPicnic = () => {
         modules={[Pagination]}
         className="mySwiper"
       >
-        {picnics.map((picnic)=>{
+        {picnicData.map((picnic)=>{
           return(
             <SwiperSlide key={picnic.id}>
               <div className='bg-white md:flex md:items-end p-2 md:p-5 rounded-[20px] mx-2 md:mx-0 md:w-[794px]'>

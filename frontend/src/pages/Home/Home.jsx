@@ -1,13 +1,13 @@
 import React, {useState, useEffect} from 'react'
-import axios from 'axios'
 import { Navbar, Footer, UpPicnic, ImagePicnic, CardPartner, HappyList, BannerHome, HomeAbout } from '../../components'
+import { getApi } from '../../config/HTTPHandler'
 
 const Home = () => {
     const [picnics, setPicnics] = useState([]) 
 
     const getPicnic = async() => {
-        const response = await axios.get('http://localhost:1337/api/picnics?populate=*')
-        setPicnics(response.data.data)
+        const response = await getApi('/picnics?populate=*', true)
+        setPicnics(response.data)
     }
 
     useEffect(()=>{
@@ -24,11 +24,11 @@ const Home = () => {
                 <div className='mx-2'>
                     <HomeAbout/>
                 </div>
-               {picnics.length>0 && (<div className='mt-16 md:mt-20'>
+                {picnics.length>0 && (<div className='mt-16 md:mt-20'>
                     <p className='text-center text-[#EC5151] font-workSans font-700 text-[49px] mb-6'>Upcoming <span className='text-[#262626]'>Picnic</span></p>
                     <div className='bg-[#FFE0E0]'>
                         <div className='container py-12 gap-7'>
-                            <UpPicnic />
+                            <UpPicnic picnicData={picnics} />
                         </div>
                     </div>
                 </div>)}

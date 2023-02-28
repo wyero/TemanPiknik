@@ -1,13 +1,13 @@
 import React, { useEffect, useState } from 'react'
 import CardHappy from './CardHappy'
-import axios from 'axios'
+import { getApi } from '../config/HTTPHandler'
 
 const HappyList = () => {
   const [testimonial, setTestimonial] = useState([])
   useEffect(()=>{
     const getTestimonial = async() => {
-      const response = await axios.get('http://localhost:1337/api/testimonials?populate=*')
-      setTestimonial(response.data.data)
+      const response = await getApi('/testimonials?populate=*', true)
+      setTestimonial(response.data)
     } 
     getTestimonial()
   }, [])

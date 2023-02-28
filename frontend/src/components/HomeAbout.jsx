@@ -1,6 +1,6 @@
 import React, {useState, useEffect} from 'react'
-import axios from 'axios'
 import ReactMarkdown  from 'react-markdown'
+import { getApi } from '../config/HTTPHandler'
 
 const HomeAbout = () => {
     const [content, setContent] = useState({})
@@ -8,8 +8,8 @@ const HomeAbout = () => {
 
     useEffect(()=>{
         const getContent = async() => { 
-            const response = await axios.get('http://localhost:1337/api/about-page?populate=*')
-            setContent(response.data.data)
+            const response = await getApi('/about-page?populate=*', true)
+            setContent(response.data)
             setLoading(false)
         }
         getContent()
