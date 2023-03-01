@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import axios from 'axios'
+import { postApi } from '../config/HTTPHandler'
 
 const Contact = () => {
     const [name, setName] = useState('')
@@ -9,13 +9,11 @@ const Contact = () => {
     const sendMessage = async(e) => {
         e.preventDefault()
         try {
-            await axios.post('http://localhost:1337/api/contact-forms',{
-                data:{
-                    name: name,
-                    email: email,
-                    description: message
-                }
-            })
+            await postApi('/api/contact-forms',{
+                name: name,
+                email: email,
+                description: message
+            }, true)
             setName('')
             setEmail('')
             setMessage('')

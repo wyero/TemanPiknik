@@ -2,23 +2,23 @@ import React, { useEffect, useState } from 'react'
 import { Footer, Navbar } from '../../components'
 import {BsFacebook, BsTwitter, BsInstagram} from 'react-icons/bs'
 import { useParams } from 'react-router-dom'
-import axios from 'axios'
 import ReactMarkDown from 'react-markdown'
+import { getApi } from '../../config/HTTPHandler'
 
 const Article = () => {
     const [article, setArticle] = useState([])
     const [loading, setLoading] = useState(true)
-    const {slug} = useParams()
+    const {id} = useParams()
 
     useEffect(()=>{
         const getArticle = async() => {
-            const response = await axios.get(`http://localhost:1337/api/picnic-collections?filters[slug][$eq]=${slug}&populate=*`)
-            setArticle(response.data.data[0])
+            const response = await getApi(`/picnic-collections/${id}?populate=*`, true)
+            setArticle(response.data)
             setLoading(false)
         }
         getArticle()
          // eslint-disable-next-line react-hooks/exhaustive-deps
-    }, [])
+    }, [id])
 
     if(loading){
         return <h2 className='text-[22px] mt-10 text-center font-workSans font-600'>Loading...</h2>
@@ -29,7 +29,7 @@ const Article = () => {
         <Navbar/>
         <div className='lg:mx-auto font-workSans mx-2 lg:w-[859px] mb-[132.38px]'>
             <div>
-                <img src={process.env.REACT_APP_BASE_URL + article.attributes.image.data.attributes.url} alt={article.attributes.title} className='sm:w-[859px] mx-auto h-[312px] rounded-2xl'/>
+                <img src={process.env.REACT_APP_BASE_URL + article.attributes.images.data[0].attributes.url} alt={article.attributes.title} className='sm:w-[859px] mx-auto h-[312px] rounded-2xl'/>
                 <p className='text-[49px] font-700 leading-[56px] mt-10 mb-5 text-[#262626]'>{article.attributes.title}</p>
                 <ReactMarkDown className='content contentPicnic'>{article.attributes.description}</ReactMarkDown>
             </div>

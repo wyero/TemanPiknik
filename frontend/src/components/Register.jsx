@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import axios from 'axios'
+import { postApi } from '../config/HTTPHandler'
 
 const Register = () => {
     const [name, setName] = useState('')
@@ -9,13 +9,11 @@ const Register = () => {
     const register = async(e) => {
         e.preventDefault()
         try {
-            await axios.post('http://localhost:1337/api/picnic-forms', {
-                data: {
-                    fullname: name,
-                    email: email,
-                    phone_number: phone
-                }
-            })
+            await postApi('/api/picnic-forms', {
+                fullname: name,
+                email: email,
+                phone_number: phone
+            }, true)
             setName('')
             setEmail('')
             setPhone('')

@@ -1,8 +1,8 @@
 import React, { useState, useEffect } from 'react'
 import { Footer, Navbar, Register } from '../../components'
 import { useParams } from 'react-router-dom'
-import axios from 'axios'
 import ReactMarkdown from 'react-markdown'
+import { getApi } from '../../config/HTTPHandler'
 
 const DetailPicnic = () => {
     const [detailPicnic, setDetailPicnic] = useState({})
@@ -11,8 +11,8 @@ const DetailPicnic = () => {
 
     useEffect(()=>{
         const getPicnicByTitle = async()=>{
-            const response = await axios.get(`http://localhost:1337/api/picnics?filters[slug][$eq]=${slug}&populate=*`)
-            setDetailPicnic(response.data.data)
+            const response = await getApi(`/picnics?filters[slug][$eq]=${slug}&populate=*`,true)
+            setDetailPicnic(response.data)
             setLoading(false)
         }
         getPicnicByTitle()
@@ -20,7 +20,7 @@ const DetailPicnic = () => {
     }, [])
 
     if(loading){
-        return <h2 className='text-[22px] mt-10 text-center   font-workSans font-600'>Loading...</h2>
+        return <h2 className='text-[22px] mt-10 text-center font-workSans font-600'>Loading...</h2>
     }
 
     const myDate = (value) => {

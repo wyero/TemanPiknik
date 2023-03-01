@@ -18,17 +18,15 @@ const Home = () => {
         <div className='overflow-hidden'>
             <Navbar />
             <section className=''>
-                <div>
-                    <BannerHome/>
-                </div>
+                <BannerHome/>
                 <div className='mx-2'>
                     <HomeAbout/>
                 </div>
-                {picnics.length>0 && (<div className='mt-16 md:mt-20'>
+               {picnics.length>0 && (<div className='mt-16 md:mt-20'>
                     <p className='text-center text-[#EC5151] font-workSans font-700 text-[49px] mb-6'>Upcoming <span className='text-[#262626]'>Picnic</span></p>
                     <div className='bg-[#FFE0E0]'>
                         <div className='container py-12 gap-7'>
-                            <UpPicnic picnicData={picnics} />
+                            <UpPicnic />
                         </div>
                     </div>
                 </div>)}

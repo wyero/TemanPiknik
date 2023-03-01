@@ -1,5 +1,5 @@
 import React, {useState, useEffect} from 'react'
-import axios from 'axios'
+import { getApi } from '../../config/HTTPHandler'
 import { Link } from 'react-router-dom'
 import { AboutContent, BannerAbout, CardTeam, Contact, Footer, Navbar } from '../../components'
 import {BsWhatsapp, BsInstagram} from 'react-icons/bs'
@@ -9,8 +9,8 @@ const About = () => {
     const [teams, setTeams] = useState([])
     useEffect(()=>{
         const getTeam = async() => {
-            const response = await axios.get('http://localhost:1337/api/teams?populate=*')
-            setTeams(response.data.data)
+            const response = await getApi('/teams?populate=*', true)
+            setTeams(response.data)
         }
         getTeam()
     }, [])
@@ -24,11 +24,9 @@ const About = () => {
             <div className='mt-16 md:mt-[127px] mb-[114px] container'>
                 <p className='font-workSans font-700 text-[49px] text-center text-[#262626] mb-10'>Our <span className='text-[#EC5151]'>Team</span></p>
                 <div className='flex flex-wrap justify-evenly gap-y-[88px] mx-2'>
-                    {teams.slice(0,6).map((team)=>{
-                        return(
-                            <CardTeam key={team.id} team={team}/>
-                        )
-                    })}
+                    {teams.slice(0,6).map((team)=>(
+                        <CardTeam key={team.id} team={team}/>
+                    ))}
                 </div> 
                 {teams.length>6 && (<div className='text-center capitalize relative top-10 text-[#EC5151] font-500 font-workSans'>
                     <Link to='/teams' className='duration-150 hover:opacity-50 '>view all</Link>

@@ -1,9 +1,20 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import { Link } from 'react-router-dom'
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Pagination } from "swiper";
+import { getApi } from '../config/HTTPHandler';
 
-const UpPicnic = ({ picnicData }) => {
+const UpPicnic = () => {
+  const [picnicData, setPicnicData] = useState([])
+
+  useEffect(()=>{
+    const getPicnic = async() => {
+      const response = await getApi('/picnics?populate=*', true)
+      setPicnicData(response.data)
+    }
+    getPicnic()
+  },[])
+
   const myDate = (value) => {
     var options = {
       year: "numeric",
@@ -22,8 +33,7 @@ const UpPicnic = ({ picnicData }) => {
         modules={[Pagination]}
         className="mySwiper"
       >
-        {picnicData.map((picnic)=>{
-          return(
+        {picnicData.map((picnic)=>(
             <SwiperSlide key={picnic.id}>
               <div className='bg-white md:flex md:items-end p-2 md:p-5 rounded-[20px] mx-2 md:mx-0 md:w-[794px]'>
                 <img src={process.env.REACT_APP_BASE_URL + picnic.attributes.feature_image.data.attributes.url} alt={picnic.attributes.title} className='h-[311px] md:w-[310px] w-full mx-auto mb-4 md:mb-0 md:mr-5'/>
@@ -37,8 +47,7 @@ const UpPicnic = ({ picnicData }) => {
                 </div>
               </div>
             </SwiperSlide>
-          )
-        })}
+        ))}
       </Swiper>
   )
 }
